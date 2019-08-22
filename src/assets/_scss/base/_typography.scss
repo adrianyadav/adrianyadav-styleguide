@@ -1,0 +1,145 @@
+body
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: $medium-weight;
+    line-height: 1.6;
+
+    color: $default-font-color;
+}
+
+.heading-primary
+{
+    font-size: 6rem;
+    font-weight: $light-weight;
+
+    color: $color-white;
+
+    @include respond(phone)
+    {
+        font-size: 3.5rem;
+    }
+
+    &__main
+    {
+        letter-spacing: .75rem;
+    }
+    &__sub
+    {
+        font-size: 2rem;
+
+        display: block;
+
+        letter-spacing: 1rem;
+    }
+}
+.heading-secondary
+{
+    font-size: 3.5rem;
+    font-weight: $light-weight;
+
+    display: block;
+
+    max-width: 20rem;
+    margin-bottom: $default-margin-bottom;
+
+    text-transform: uppercase;
+    &::after
+    {
+        display: block;
+
+        content: '';
+        transform: scaleX(.8);
+
+        border-bottom: 3px solid $default-font-color;
+    }
+    &--light
+    {
+        color: $color-white;
+        &::after
+        {
+            display: block;
+
+            content: '';
+            transform: scaleX(.8);
+
+            border-bottom: 3px solid $color-white;
+        }
+    }
+}
+
+.heading-tertiary
+{
+    font-size: 2.5rem;
+    font-weight: $light-weight;
+
+    @include respond(phone)
+    {
+        font-size: 2rem;
+    }
+}
+
+h2
+{
+    font-size: 3rem;
+    font-weight: $medium-weight;
+    line-height: 140%;
+
+    display: block;
+
+    margin-top: $default-margin-top;
+    margin-bottom: $default-margin-bottom;
+
+    @include respond(tab-port)
+    {
+        font-size: 2.5rem;
+    }
+}
+
+.paragraph,
+p
+{
+    font-size: $default-font-size;
+    &:not(last-child)
+    {
+        margin-bottom: $default-margin-bottom;
+    }
+}
+
+.breadcrumb
+{
+    margin-bottom: 2rem;
+
+    text-align: center;
+    &__link
+    {
+        &:link,
+        &:visited
+        {
+            color: $color-primary;
+        }
+        &:hover,
+        &:active
+        {
+            color: $color-secondary-dark2;
+        }
+    }
+}
+
+a
+{
+    &:link,
+    &:visited
+    {
+        color: $color-primary;
+    }
+    &:hover,
+    &:active
+    {
+        color: $color-secondary-dark2;
+    }
+}
+
+.highlight
+{
+    color: $color-primary;
+}
